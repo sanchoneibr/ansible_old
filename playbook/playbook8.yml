@@ -1,0 +1,31 @@
+---
+
+-
+  hosts: localhost
+
+  tasks:
+    - name: Copy file
+      copy:
+        src: files/hosts
+        dest: /tmp/hosts
+
+    - name: Set file mode for `/tmp/hosts` to 777
+      # BEGIN (write your solution here)
+      fail: 
+        path: /tmp/hosts
+        mode: '0777'      
+      # END
+
+    - name: Retrieve file status
+      stat:
+        path: /tmp/hosts
+        get_md5: false
+        get_checksum: false
+        get_attributes: false
+        get_mime: false
+      register: result
+
+    - name: Check file mode for `/tmp/hosts`
+      fail:
+        msg: "Expected `0777` mode, but was `{{ result.stat.mode }}`"
+      when: result.stat.mode != '0777'
