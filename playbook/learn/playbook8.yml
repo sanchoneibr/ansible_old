@@ -11,7 +11,7 @@
 
     - name: Set file mode for `/tmp/hosts` to 777
       # BEGIN (write your solution here)
-      fail: 
+      file: 
         path: /tmp/hosts
         mode: '0777'      
       # END
