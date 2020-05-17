@@ -1,0 +1,49 @@
+- hosts: all
+  gather_facts: no
+
+  vars:
+    nginx_configs_path: /tmp/nginx/conf.d
+    hostname: hexlettest.com
+    www_data_path: "/tmp/{{ hostname }}"
+    nginx_site_config_path: "{{ nginx_configs_path }}/{{ hostname }}"
+
+  tasks:
+
+    # BEGIN (write your solution here)
+    - name: mkdir dir_path
+      file:
+         path: "{{ item }}"
+         state: directory
+      with_items:
+        - "{{ www_data_path }}"
+        - "{{ nginx_configs_path }}"
+
+    - name: copy config file one
+      template: 
+         src: "templates/{{ item.file_copy }}"
+         dest: "{{ item.end_file }}"
+      loop:
+        - { file_copy: 'nginx.hexlettest.com.j2', end_file: "{{ nginx_site_config_path }}" }
+        - { file_copy: 'index.html.j2', end_file: "{{ www_data_path }}/index.html" }    
+    
+    # END
+
+    - name: Retrieve file system status
+      stat:
+        path: "{{ item }}"
+        get_md5: false
+        get_checksum: false
+        get_attributes: false
+        get_mime: false
+      with_items:
+        - "{{ www_data_path }}"
+        - "{{ www_data_path }}/index.html"
+        - "{{ nginx_configs_path }}"
+        - "{{ nginx_site_config_path }}"
+      register: results
+
+    - name: Check all files and dirs exists
+      fail:
+        msg: "Expected {{ item.item }} to be exists"
+      when: not item.stat.exists
+      with_items: "{{ results.results }}"
