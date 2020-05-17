@@ -1,0 +1,107 @@
+- hosts: all
+  vars:
+    ansible_become: true
+    local_user: msancho
+  tasks:
+    - name: install snapd apt
+      apt: name={{ item }} state=present
+      with_items:
+        - snapd
+      when: ansible_pkg_mgr == "apt"
+      tags: install_code
+
+    - name: install snapd yum
+      yum: name={{ item }} state=present
+      with_items:
+        - snapd
+      when: ansible_pkg_mgr == "yum"
+      tags: install_code
+
+    - name: Install code
+      snap:
+        name:
+          - code
+        classic: yes
+      notify:
+        - install extension code
+      tags: install_code
+
+    - name: Add an Apt yarnpkg signing key, uses whichever key is at the URL
+      apt_key:
+        url: https://dl.yarnpkg.com/debian/pubkey.gpg
+        state: present
+      when: ansible_pkg_mgr == "apt"
+      tags: install_yarn
+
+    - name: Add specified repository into sources list apt.
+      apt_repository:
+        repo: deb https://dl.yarnpkg.com/debian/ stable main
+        state: present
+      when: ansible_pkg_mgr == "apt"
+      tags: install_yarn
+
+    - name: install yarn
+      apt:
+        name:
+          - yarn
+        state: present
+        update_cache: yes
+      when: ansible_pkg_mgr == "apt"
+      notify:
+        - Test yarn
+        - verification test yarn
+      tags: install_yarn
+
+  handlers:
+    - name: Test yarn
+      command: yarn --version
+      register: result
+
+    - name: verification test yarn
+      debug:
+        msg: Run yarn {{ result.stdout }}
+
+    - name: install extension code
+      shell: code --install-extension {{ item }}
+      tags: install_code
+      with_items:
+        - HookyQR.beautify
+        - aaron-bond.better-comments
+        - alefragnani.Bookmarks
+        - CoenraadS.bracket-pair-colorizer-2
+        - mhutchie.git-graph
+        - lacroixdavid1.vscode-format-context-menu
+        - oderwat.indent-rainbow
+        - akamud.vscode-theme-onedark
+        - christian-kohler.npm-intellisense
+        - christian-kohler.path-intellisense
+        - dbaeumer.vscode-eslint
+        - dsznajder.es7-react-js-snippets
+        - eamodio.gitlens
+        - EditorConfig.EditorConfig
+        - eg2.vscode-npm-script
+        - emmanuelbeziat.vscode-great-icons
+        - esbenp.prettier-vscode
+        - praveencrony.total-lines
+        - formulahendry.auto-close-tag
+        - formulahendry.auto-rename-tag
+        - ms-azuretools.vscode-docker
+        - MS-CEINTL.vscode-language-pack-ru
+        - msjsdiag.debugger-for-chrome
+        - Orta.vscode-jest
+        - oshri6688.javascript-test-runner
+        - rebornix.project-snippets
+        - Shan.code-settings-sync
+        - shanoor.vscode-nginx
+        - SirTori.indenticator
+        - sleistner.vscode-fileutils
+        - slevesque.vscode-multiclip
+        - streetsidesoftware.code-spell-checker
+        - streetsidesoftware.code-spell-checker-russian
+        - VisualStudioExptTeam.vscodeintellicode
+        - wayou.vscode-todo-highlight
+        - whtouche.vscode-js-console-utils
+        - wmaurer.change-case
+        - xabikos.JavaScriptSnippets
+      become: no
+      become_user: "{{ local_user }}"
