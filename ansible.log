@@ -1,0 +1,612 @@
+2021-08-06 12:18:10,435 p=121690 u=mdm_admin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-06 12:18:10,828 p=121690 u=mdm_admin n=ansible | PLAY [Ansible playbook example] *********************************************************************************************************************************************
+2021-08-06 12:18:10,847 p=121690 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:18:12,132 p=121690 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:18:12,143 p=121690 u=mdm_admin n=ansible | TASK [remove docer apt] *****************************************************************************************************************************************************
+2021-08-06 12:18:12,201 p=121784 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:18:13,183 p=121690 u=mdm_admin n=ansible | ok: [127.0.0.1] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:18:13,195 p=121690 u=mdm_admin n=ansible | TASK [remove docer yum] *****************************************************************************************************************************************************
+2021-08-06 12:18:13,253 p=121813 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:18:13,279 p=121690 u=mdm_admin n=ansible | skipping: [127.0.0.1] => (item=[]) 
+2021-08-06 12:18:13,289 p=121690 u=mdm_admin n=ansible | TASK [install environment docker apt] ***************************************************************************************************************************************
+2021-08-06 12:18:21,711 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:18:21,722 p=121690 u=mdm_admin n=ansible | TASK [install environment docker yum] ***************************************************************************************************************************************
+2021-08-06 12:18:21,787 p=121690 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:18:21,797 p=121690 u=mdm_admin n=ansible | TASK [Add an Apt signing key, uses whichever key is at the URL] *************************************************************************************************************
+2021-08-06 12:18:23,773 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:18:23,783 p=121690 u=mdm_admin n=ansible | TASK [Add specified repository into sources list apt.] **********************************************************************************************************************
+2021-08-06 12:18:30,949 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:18:30,959 p=121690 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:18:31,022 p=121690 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:18:31,033 p=121690 u=mdm_admin n=ansible | TASK [Add specified repository into sources list yum.] **********************************************************************************************************************
+2021-08-06 12:18:31,094 p=121690 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:18:31,103 p=121690 u=mdm_admin n=ansible | TASK [install docker] *******************************************************************************************************************************************************
+2021-08-06 12:19:02,247 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:02,256 p=121690 u=mdm_admin n=ansible | TASK [install docker yum] ***************************************************************************************************************************************************
+2021-08-06 12:19:02,318 p=121690 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:19:02,327 p=121690 u=mdm_admin n=ansible | TASK [Docker is enable] *****************************************************************************************************************************************************
+2021-08-06 12:19:03,069 p=121690 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:19:03,079 p=121690 u=mdm_admin n=ansible | TASK [Copy config daemon] ***************************************************************************************************************************************************
+2021-08-06 12:19:03,825 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:03,833 p=121690 u=mdm_admin n=ansible | TASK [Add groups 'docker' the user 'cosysoft'] ******************************************************************************************************************************
+2021-08-06 12:19:04,383 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:04,393 p=121690 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:19:04,672 p=121690 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:19:04,683 p=121690 u=mdm_admin n=ansible | TASK [Download compose] *****************************************************************************************************************************************************
+2021-08-06 12:19:07,490 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:07,492 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [Docker is restart] *****************************************************************************************************************************************
+2021-08-06 12:19:08,335 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:08,335 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [test docker] ***********************************************************************************************************************************************
+2021-08-06 12:19:12,581 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:12,582 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [verification testa docker start] ***************************************************************************************************************************
+2021-08-06 12:19:12,656 p=121690 u=mdm_admin n=ansible | ok: [127.0.0.1] => {
+    "msg": "Run docker \nHello from Docker!\nThis message shows that your installation appears to be working correctly.\n\nTo generate this message, Docker took the following steps:\n 1. The Docker client contacted the Docker daemon.\n 2. The Docker daemon pulled the \"hello-world\" image from the Docker Hub.\n    (amd64)\n 3. The Docker daemon created a new container from that image which runs the\n    executable that produces the output you are currently reading.\n 4. The Docker daemon streamed that output to the Docker client, which sent it\n    to your terminal.\n\nTo try something more ambitious, you can run an Ubuntu container with:\n $ docker run -it ubuntu bash\n\nShare images, automate workflows, and more with a free Docker ID:\n https://hub.docker.com/\n\nFor more examples and ideas, visit:\n https://docs.docker.com/get-started/"
+}
+2021-08-06 12:19:12,657 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [clear for docker] ******************************************************************************************************************************************
+2021-08-06 12:19:12,973 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:12,974 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [clear for docker iamge] ************************************************************************************************************************************
+2021-08-06 12:19:13,287 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:13,288 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [Create a symbolic linc Compose] ****************************************************************************************************************************
+2021-08-06 12:19:13,809 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:13,809 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [test docker-compose] ***************************************************************************************************************************************
+2021-08-06 12:19:14,810 p=121690 u=mdm_admin n=ansible | changed: [127.0.0.1]
+2021-08-06 12:19:14,810 p=121690 u=mdm_admin n=ansible | RUNNING HANDLER [verification test docker-compose] **************************************************************************************************************************
+2021-08-06 12:19:14,882 p=121690 u=mdm_admin n=ansible | ok: [127.0.0.1] => {
+    "msg": "Run docker docker-compose version 1.25.5, build 8a1c60f6"
+}
+2021-08-06 12:19:14,884 p=121690 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:19:14,885 p=121690 u=mdm_admin n=ansible | 127.0.0.1                  : ok=19   changed=13   unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+2021-08-06 12:23:07,761 p=127147 u=mdm_admin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-06 12:23:08,134 p=127147 u=mdm_admin n=ansible | PLAY [Ansible playbook example] *********************************************************************************************************************************************
+2021-08-06 12:23:08,151 p=127147 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:23:09,382 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:23:09,393 p=127147 u=mdm_admin n=ansible | TASK [remove docer apt] *****************************************************************************************************************************************************
+2021-08-06 12:23:09,448 p=127231 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:23:10,411 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:23:10,423 p=127147 u=mdm_admin n=ansible | TASK [remove docer yum] *****************************************************************************************************************************************************
+2021-08-06 12:23:10,483 p=127260 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:23:10,512 p=127147 u=mdm_admin n=ansible | skipping: [127.0.0.1] => (item=[]) 
+2021-08-06 12:23:10,526 p=127147 u=mdm_admin n=ansible | TASK [install environment docker apt] ***************************************************************************************************************************************
+2021-08-06 12:23:12,998 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:23:13,009 p=127147 u=mdm_admin n=ansible | TASK [install environment docker yum] ***************************************************************************************************************************************
+2021-08-06 12:23:13,073 p=127147 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:23:13,083 p=127147 u=mdm_admin n=ansible | TASK [Add an Apt signing key, uses whichever key is at the URL] *************************************************************************************************************
+2021-08-06 12:23:14,717 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:23:14,729 p=127147 u=mdm_admin n=ansible | TASK [Add specified repository into sources list apt.] **********************************************************************************************************************
+2021-08-06 12:23:15,558 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:23:15,573 p=127147 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:23:15,640 p=127147 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:23:15,651 p=127147 u=mdm_admin n=ansible | TASK [Add specified repository into sources list yum.] **********************************************************************************************************************
+2021-08-06 12:23:15,714 p=127147 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:23:15,726 p=127147 u=mdm_admin n=ansible | TASK [install docker] *******************************************************************************************************************************************************
+2021-08-06 12:23:18,499 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:23:18,509 p=127147 u=mdm_admin n=ansible | TASK [install docker yum] ***************************************************************************************************************************************************
+2021-08-06 12:23:18,577 p=127147 u=mdm_admin n=ansible | skipping: [127.0.0.1]
+2021-08-06 12:23:18,588 p=127147 u=mdm_admin n=ansible | TASK [Docker is enable] *****************************************************************************************************************************************************
+2021-08-06 12:23:19,363 p=127147 u=mdm_admin n=ansible | ok: [127.0.0.1]
+2021-08-06 12:23:19,374 p=127147 u=mdm_admin n=ansible | TASK [Copy config daemon] ***************************************************************************************************************************************************
+2021-08-06 12:23:19,796 p=127147 u=mdm_admin n=ansible |  [ERROR]: User interrupted execution
+
+2021-08-06 12:24:31,882 p=130126 u=mdm_admin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-06 12:24:32,267 p=130126 u=mdm_admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: docker_hosts
+
+2021-08-06 12:24:32,268 p=130126 u=mdm_admin n=ansible | PLAY [Ansible playbook example] *********************************************************************************************************************************************
+2021-08-06 12:24:32,268 p=130126 u=mdm_admin n=ansible | skipping: no hosts matched
+2021-08-06 12:24:32,268 p=130126 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:26:13,558 p=131993 u=mdm_admin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-06 12:26:13,933 p=131993 u=mdm_admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: docker_hosts
+
+2021-08-06 12:26:13,934 p=131993 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:26:13,934 p=131993 u=mdm_admin n=ansible | skipping: no hosts matched
+2021-08-06 12:26:13,934 p=131993 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:30:26,454 p=136550 u=mdm_admin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-06 12:30:26,848 p=136550 u=mdm_admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: docker_hosts
+
+2021-08-06 12:30:26,849 p=136550 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:30:26,849 p=136550 u=mdm_admin n=ansible | skipping: no hosts matched
+2021-08-06 12:30:26,849 p=136550 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:34:54,601 p=141011 u=mdm_admin n=ansible | ansible-playbook 2.9.6
+  config file = /home/mdm_admin/ansible/ansible.cfg
+  configured module search path = ['/home/mdm_admin/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.8.10 (default, Jun  2 2021, 10:49:15) [GCC 9.4.0]
+2021-08-06 12:34:54,601 p=141011 u=mdm_admin n=ansible | Using /home/mdm_admin/ansible/ansible.cfg as config file
+2021-08-06 12:34:54,611 p=141011 u=mdm_admin n=ansible | host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-08-06 12:34:54,611 p=141011 u=mdm_admin n=ansible | script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-08-06 12:34:54,612 p=141011 u=mdm_admin n=ansible | auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-08-06 12:34:54,616 p=141011 u=mdm_admin n=ansible | Parsed /etc/ansible/hosts inventory source with ini plugin
+2021-08-06 12:34:54,616 p=141011 u=mdm_admin n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-08-06 12:34:55,015 p=141011 u=mdm_admin n=ansible | PLAYBOOK: install_docker.yml ************************************************************************************************************************************************
+2021-08-06 12:34:55,016 p=141011 u=mdm_admin n=ansible | 1 plays in playbook/install_docker.yml
+2021-08-06 12:34:55,017 p=141011 u=mdm_admin n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: docker_hosts
+
+2021-08-06 12:34:55,018 p=141011 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:34:55,018 p=141011 u=mdm_admin n=ansible | skipping: no hosts matched
+2021-08-06 12:34:55,018 p=141011 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:37:06,520 p=143368 u=mdm_admin n=ansible | ansible-playbook 2.9.6
+  config file = /home/mdm_admin/ansible/ansible.cfg
+  configured module search path = ['/home/mdm_admin/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.8.10 (default, Jun  2 2021, 10:49:15) [GCC 9.4.0]
+2021-08-06 12:37:06,520 p=143368 u=mdm_admin n=ansible | Using /home/mdm_admin/ansible/ansible.cfg as config file
+2021-08-06 12:37:06,534 p=143368 u=mdm_admin n=ansible | host_list declined parsing /home/mdm_admin/ansible/hosts.yml as it did not pass its verify_file() method
+2021-08-06 12:37:06,534 p=143368 u=mdm_admin n=ansible | script declined parsing /home/mdm_admin/ansible/hosts.yml as it did not pass its verify_file() method
+2021-08-06 12:37:06,540 p=143368 u=mdm_admin n=ansible | Parsed /home/mdm_admin/ansible/hosts.yml inventory source with ini plugin
+2021-08-06 12:37:06,954 p=143368 u=mdm_admin n=ansible | PLAYBOOK: install_docker.yml ************************************************************************************************************************************************
+2021-08-06 12:37:06,955 p=143368 u=mdm_admin n=ansible | 1 plays in playbook/install_docker.yml
+2021-08-06 12:37:06,958 p=143368 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:37:06,976 p=143368 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:37:06,977 p=143368 u=mdm_admin n=ansible | task path: /home/mdm_admin/ansible/playbook/install_docker.yml:1
+2021-08-06 12:37:07,006 p=143511 u=mdm_admin n=ansible | <mdm02.elcom.loc> ESTABLISH SSH CONNECTION FOR USER: None
+2021-08-06 12:37:07,006 p=143510 u=mdm_admin n=ansible | <localhost> ESTABLISH SSH CONNECTION FOR USER: mdm_admin
+2021-08-06 12:37:07,008 p=143511 u=mdm_admin n=ansible | <mdm02.elcom.loc> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/mdm_admin/.ansible/cp/e18d258b5e mdm02.elcom.loc '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+2021-08-06 12:37:07,008 p=143510 u=mdm_admin n=ansible | <localhost> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="mdm_admin"' -o ConnectTimeout=10 -o ControlPath=/home/mdm_admin/.ansible/cp/bf9d96ea12 localhost '/bin/sh -c '"'"'echo ~mdm_admin && sleep 0'"'"''
+2021-08-06 12:37:07,023 p=143512 u=mdm_admin n=ansible | <mdmdb01.elcom.loc> ESTABLISH SSH CONNECTION FOR USER: None
+2021-08-06 12:37:07,025 p=143512 u=mdm_admin n=ansible | <mdmdb01.elcom.loc> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/mdm_admin/.ansible/cp/1d9ad68a95 mdmdb01.elcom.loc '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+2021-08-06 12:37:16,666 p=143368 u=mdm_admin n=ansible |  [ERROR]: User interrupted execution
+
+2021-08-06 12:39:12,237 p=145442 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:39:12,255 p=145442 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:39:12,329 p=145442 u=mdm_admin n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.\r\nmdm_admin@localhost: Permission denied (publickey,password).", "unreachable": true}
+2021-08-06 12:39:12,337 p=145442 u=mdm_admin n=ansible | fatal: [mdm02.elcom.loc]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'mdm02.elcom.loc,10.1.10.128' (ECDSA) to the list of known hosts.\r\nmdm_admin@mdm02.elcom.loc: Permission denied (publickey,password).", "unreachable": true}
+2021-08-06 12:39:12,345 p=145442 u=mdm_admin n=ansible | fatal: [mdmdb01.elcom.loc]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added 'mdmdb01.elcom.loc,10.1.10.129' (ECDSA) to the list of known hosts.\r\nmdm_admin@mdmdb01.elcom.loc: Permission denied (publickey,password).", "unreachable": true}
+2021-08-06 12:39:12,347 p=145442 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:39:12,347 p=145442 u=mdm_admin n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-06 12:39:12,347 p=145442 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-06 12:39:12,347 p=145442 u=mdm_admin n=ansible | mdmdb01.elcom.loc          : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-06 12:45:25,364 p=138934 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:45:25,386 p=138934 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:45:25,478 p=138934 u=mdm_admin n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: mdm_admin@localhost: Permission denied (publickey,password).", "unreachable": true}
+2021-08-06 12:45:27,522 p=138934 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:45:27,637 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:45:27,655 p=138934 u=mdm_admin n=ansible | TASK [remove docer apt] *****************************************************************************************************************************************************
+2021-08-06 12:45:27,718 p=138991 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:45:27,746 p=138992 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:45:28,822 p=138934 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:45:28,911 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:45:28,925 p=138934 u=mdm_admin n=ansible | TASK [remove docer yum] *****************************************************************************************************************************************************
+2021-08-06 12:45:28,988 p=139009 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:45:29,008 p=139010 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:45:29,020 p=138934 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc] => (item=[]) 
+2021-08-06 12:45:29,037 p=138934 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc] => (item=[]) 
+2021-08-06 12:45:29,050 p=138934 u=mdm_admin n=ansible | TASK [install environment docker apt] ***************************************************************************************************************************************
+2021-08-06 12:45:31,920 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:45:40,025 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:45:40,036 p=138934 u=mdm_admin n=ansible | TASK [install environment docker yum] ***************************************************************************************************************************************
+2021-08-06 12:45:40,103 p=138934 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:45:40,124 p=138934 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:45:40,135 p=138934 u=mdm_admin n=ansible | TASK [Add an Apt signing key, uses whichever key is at the URL] *************************************************************************************************************
+2021-08-06 12:45:41,871 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:45:42,054 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:45:42,071 p=138934 u=mdm_admin n=ansible | TASK [Add specified repository into sources list apt.] **********************************************************************************************************************
+2021-08-06 12:45:43,016 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:45:49,174 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:45:49,191 p=138934 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:45:49,260 p=138934 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:45:49,283 p=138934 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:45:49,293 p=138934 u=mdm_admin n=ansible | TASK [Add specified repository into sources list yum.] **********************************************************************************************************************
+2021-08-06 12:45:49,359 p=138934 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:45:49,378 p=138934 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:45:49,388 p=138934 u=mdm_admin n=ansible | TASK [install docker] *******************************************************************************************************************************************************
+2021-08-06 12:45:52,201 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:46:19,996 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:20,010 p=138934 u=mdm_admin n=ansible | TASK [install docker yum] ***************************************************************************************************************************************************
+2021-08-06 12:46:20,085 p=138934 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:46:20,112 p=138934 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:46:20,122 p=138934 u=mdm_admin n=ansible | TASK [Docker is enable] *****************************************************************************************************************************************************
+2021-08-06 12:46:20,983 p=138934 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:46:21,024 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:46:21,036 p=138934 u=mdm_admin n=ansible | TASK [Copy config daemon] ***************************************************************************************************************************************************
+2021-08-06 12:46:21,997 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:22,024 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:46:22,033 p=138934 u=mdm_admin n=ansible | TASK [Add groups 'docker' the user 'cosysoft'] ******************************************************************************************************************************
+2021-08-06 12:46:22,674 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:46:22,693 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:22,703 p=138934 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:46:23,075 p=138934 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:46:23,163 p=138934 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:46:23,172 p=138934 u=mdm_admin n=ansible | TASK [Download compose] *****************************************************************************************************************************************************
+2021-08-06 12:46:23,252 p=138934 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:46:25,555 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:25,556 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [Docker is restart] *****************************************************************************************************************************************
+2021-08-06 12:46:26,459 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:26,460 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [test docker] ***********************************************************************************************************************************************
+2021-08-06 12:46:32,098 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:32,099 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [verification testa docker start] ***************************************************************************************************************************
+2021-08-06 12:46:32,184 p=138934 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => {
+    "msg": "Run docker \nHello from Docker!\nThis message shows that your installation appears to be working correctly.\n\nTo generate this message, Docker took the following steps:\n 1. The Docker client contacted the Docker daemon.\n 2. The Docker daemon pulled the \"hello-world\" image from the Docker Hub.\n    (amd64)\n 3. The Docker daemon created a new container from that image which runs the\n    executable that produces the output you are currently reading.\n 4. The Docker daemon streamed that output to the Docker client, which sent it\n    to your terminal.\n\nTo try something more ambitious, you can run an Ubuntu container with:\n $ docker run -it ubuntu bash\n\nShare images, automate workflows, and more with a free Docker ID:\n https://hub.docker.com/\n\nFor more examples and ideas, visit:\n https://docs.docker.com/get-started/"
+}
+2021-08-06 12:46:32,185 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [clear for docker] ******************************************************************************************************************************************
+2021-08-06 12:46:32,607 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:32,608 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [clear for docker iamge] ************************************************************************************************************************************
+2021-08-06 12:46:33,029 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:33,030 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [Create a symbolic linc Compose] ****************************************************************************************************************************
+2021-08-06 12:46:33,433 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:33,433 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [test docker-compose] ***************************************************************************************************************************************
+2021-08-06 12:46:34,538 p=138934 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 12:46:34,539 p=138934 u=mdm_admin n=ansible | RUNNING HANDLER [verification test docker-compose] **************************************************************************************************************************
+2021-08-06 12:46:34,617 p=138934 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => {
+    "msg": "Run docker docker-compose version 1.25.5, build 8a1c60f6"
+}
+2021-08-06 12:46:34,620 p=138934 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:46:34,620 p=138934 u=mdm_admin n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-06 12:46:34,620 p=138934 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=19   changed=13   unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+2021-08-06 12:46:34,620 p=138934 u=mdm_admin n=ansible | mdmdb01.elcom.loc          : ok=10   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2021-08-06 12:47:21,798 p=139329 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:47:21,817 p=139329 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:47:21,893 p=139329 u=mdm_admin n=ansible | fatal: [localhost]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: mdm_admin@localhost: Permission denied (publickey,password).", "unreachable": true}
+2021-08-06 12:47:23,220 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:23,304 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:23,314 p=139329 u=mdm_admin n=ansible | TASK [remove docer apt] *****************************************************************************************************************************************************
+2021-08-06 12:47:23,377 p=139362 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:47:23,388 p=139363 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:47:24,435 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:47:24,464 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:47:24,477 p=139329 u=mdm_admin n=ansible | TASK [remove docer yum] *****************************************************************************************************************************************************
+2021-08-06 12:47:24,536 p=139380 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:47:24,563 p=139329 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc] => (item=[]) 
+2021-08-06 12:47:24,564 p=139381 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:47:24,589 p=139329 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc] => (item=[]) 
+2021-08-06 12:47:24,600 p=139329 u=mdm_admin n=ansible | TASK [install environment docker apt] ***************************************************************************************************************************************
+2021-08-06 12:47:26,968 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:27,397 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:27,406 p=139329 u=mdm_admin n=ansible | TASK [install environment docker yum] ***************************************************************************************************************************************
+2021-08-06 12:47:27,472 p=139329 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:47:27,484 p=139329 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:47:27,497 p=139329 u=mdm_admin n=ansible | TASK [Add an Apt signing key, uses whichever key is at the URL] *************************************************************************************************************
+2021-08-06 12:47:28,989 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:29,082 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:29,094 p=139329 u=mdm_admin n=ansible | TASK [Add specified repository into sources list apt.] **********************************************************************************************************************
+2021-08-06 12:47:29,964 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:30,016 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:30,029 p=139329 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:47:30,112 p=139329 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:47:30,119 p=139329 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:47:30,132 p=139329 u=mdm_admin n=ansible | TASK [Add specified repository into sources list yum.] **********************************************************************************************************************
+2021-08-06 12:47:30,197 p=139329 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:47:30,218 p=139329 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:47:30,230 p=139329 u=mdm_admin n=ansible | TASK [install docker] *******************************************************************************************************************************************************
+2021-08-06 12:47:32,842 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:32,944 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:32,953 p=139329 u=mdm_admin n=ansible | TASK [install docker yum] ***************************************************************************************************************************************************
+2021-08-06 12:47:33,020 p=139329 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:47:33,031 p=139329 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:47:33,041 p=139329 u=mdm_admin n=ansible | TASK [Docker is enable] *****************************************************************************************************************************************************
+2021-08-06 12:47:33,872 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:33,901 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:33,911 p=139329 u=mdm_admin n=ansible | TASK [Copy config daemon] ***************************************************************************************************************************************************
+2021-08-06 12:47:34,838 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:34,846 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:34,856 p=139329 u=mdm_admin n=ansible | TASK [Add groups 'docker' the user 'cosysoft'] ******************************************************************************************************************************
+2021-08-06 12:47:35,465 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:35,467 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:35,477 p=139329 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:47:35,901 p=139329 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:47:35,965 p=139329 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:47:35,975 p=139329 u=mdm_admin n=ansible | TASK [Download compose] *****************************************************************************************************************************************************
+2021-08-06 12:47:36,038 p=139329 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:47:36,063 p=139329 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:47:36,066 p=139329 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:47:36,066 p=139329 u=mdm_admin n=ansible | localhost                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-06 12:47:36,067 p=139329 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=10   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2021-08-06 12:47:36,067 p=139329 u=mdm_admin n=ansible | mdmdb01.elcom.loc          : ok=10   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2021-08-06 12:51:16,703 p=139716 u=mdm_admin n=ansible | PLAY [docker_hosts] *********************************************************************************************************************************************************
+2021-08-06 12:51:16,725 p=139716 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 12:51:18,014 p=139716 u=mdm_admin n=ansible | ok: [localhost]
+2021-08-06 12:51:18,668 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:51:19,563 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:51:19,574 p=139716 u=mdm_admin n=ansible | TASK [remove docer apt] *****************************************************************************************************************************************************
+2021-08-06 12:51:19,631 p=139832 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:51:19,659 p=139833 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:51:19,672 p=139834 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "apt" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-engine', 'docker.io', 'containerd', 'runc']` and remove the loop. This feature will be removed in version 2.11. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 12:51:20,673 p=139716 u=mdm_admin n=ansible | ok: [localhost] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:51:20,705 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:51:20,722 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc] => (item=['docker', 'docker-engine', 'docker.io', 'containerd', 'runc'])
+2021-08-06 12:51:20,732 p=139716 u=mdm_admin n=ansible | TASK [remove docer yum] *****************************************************************************************************************************************************
+2021-08-06 12:51:20,791 p=139880 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:51:20,815 p=139881 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:51:20,818 p=139716 u=mdm_admin n=ansible | skipping: [localhost] => (item=[]) 
+2021-08-06 12:51:20,828 p=139882 u=mdm_admin n=ansible | [DEPRECATION WARNING]: Invoking "yum" only once while using a loop via squash_actions is deprecated. Instead of using a loop to supply multiple items and specifying `name: 
+"{{ item }}"`, please use `name: ['docker', 'docker-client', 'docker-client-latest', 'docker-common', 'docker-latest', 'docker-latest-logrotate', 'docker-logrotate', 
+'docker-engine']` and remove the loop. This feature will be removed in version 2.11. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+2021-08-06 12:51:20,839 p=139716 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc] => (item=[]) 
+2021-08-06 12:51:20,851 p=139716 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc] => (item=[]) 
+2021-08-06 12:51:20,861 p=139716 u=mdm_admin n=ansible | TASK [install environment docker apt] ***************************************************************************************************************************************
+2021-08-06 12:51:23,275 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:51:23,672 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:51:27,601 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:51:27,611 p=139716 u=mdm_admin n=ansible | TASK [install environment docker yum] ***************************************************************************************************************************************
+2021-08-06 12:51:27,672 p=139716 u=mdm_admin n=ansible | skipping: [localhost]
+2021-08-06 12:51:27,700 p=139716 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:51:27,727 p=139716 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:51:27,743 p=139716 u=mdm_admin n=ansible | TASK [Add an Apt signing key, uses whichever key is at the URL] *************************************************************************************************************
+2021-08-06 12:51:29,236 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:51:29,369 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:51:29,544 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:51:29,561 p=139716 u=mdm_admin n=ansible | TASK [Add specified repository into sources list apt.] **********************************************************************************************************************
+2021-08-06 12:51:30,451 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:51:30,502 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:51:36,967 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:51:36,978 p=139716 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:51:37,046 p=139716 u=mdm_admin n=ansible | skipping: [localhost]
+2021-08-06 12:51:37,064 p=139716 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:51:37,082 p=139716 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:51:37,093 p=139716 u=mdm_admin n=ansible | TASK [Add specified repository into sources list yum.] **********************************************************************************************************************
+2021-08-06 12:51:37,158 p=139716 u=mdm_admin n=ansible | skipping: [localhost]
+2021-08-06 12:51:37,193 p=139716 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:51:37,193 p=139716 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:51:37,203 p=139716 u=mdm_admin n=ansible | TASK [install docker] *******************************************************************************************************************************************************
+2021-08-06 12:51:39,638 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:51:40,237 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:52:08,529 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:08,538 p=139716 u=mdm_admin n=ansible | TASK [install docker yum] ***************************************************************************************************************************************************
+2021-08-06 12:52:08,607 p=139716 u=mdm_admin n=ansible | skipping: [localhost]
+2021-08-06 12:52:08,621 p=139716 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:52:08,638 p=139716 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:52:08,647 p=139716 u=mdm_admin n=ansible | TASK [Docker is enable] *****************************************************************************************************************************************************
+2021-08-06 12:52:09,428 p=139716 u=mdm_admin n=ansible | ok: [localhost]
+2021-08-06 12:52:09,477 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:52:09,525 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:52:09,536 p=139716 u=mdm_admin n=ansible | TASK [Copy config daemon] ***************************************************************************************************************************************************
+2021-08-06 12:52:10,347 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:10,517 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:52:10,535 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:52:10,545 p=139716 u=mdm_admin n=ansible | TASK [Add groups 'docker' the user 'cosysoft'] ******************************************************************************************************************************
+2021-08-06 12:52:11,074 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:11,112 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:52:11,113 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:52:11,123 p=139716 u=mdm_admin n=ansible | TASK [stat] *****************************************************************************************************************************************************************
+2021-08-06 12:52:11,433 p=139716 u=mdm_admin n=ansible | ok: [localhost]
+2021-08-06 12:52:11,567 p=139716 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 12:52:11,597 p=139716 u=mdm_admin n=ansible | ok: [mdmdb01.elcom.loc]
+2021-08-06 12:52:11,607 p=139716 u=mdm_admin n=ansible | TASK [Download compose] *****************************************************************************************************************************************************
+2021-08-06 12:52:11,707 p=139716 u=mdm_admin n=ansible | skipping: [mdm02.elcom.loc]
+2021-08-06 12:52:11,716 p=139716 u=mdm_admin n=ansible | skipping: [mdmdb01.elcom.loc]
+2021-08-06 12:52:13,510 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:13,512 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [Docker is restart] *****************************************************************************************************************************************
+2021-08-06 12:52:14,479 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:14,482 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [test docker] ***********************************************************************************************************************************************
+2021-08-06 12:52:18,735 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:18,736 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [verification testa docker start] ***************************************************************************************************************************
+2021-08-06 12:52:18,826 p=139716 u=mdm_admin n=ansible | ok: [localhost] => {
+    "msg": "Run docker \nHello from Docker!\nThis message shows that your installation appears to be working correctly.\n\nTo generate this message, Docker took the following steps:\n 1. The Docker client contacted the Docker daemon.\n 2. The Docker daemon pulled the \"hello-world\" image from the Docker Hub.\n    (amd64)\n 3. The Docker daemon created a new container from that image which runs the\n    executable that produces the output you are currently reading.\n 4. The Docker daemon streamed that output to the Docker client, which sent it\n    to your terminal.\n\nTo try something more ambitious, you can run an Ubuntu container with:\n $ docker run -it ubuntu bash\n\nShare images, automate workflows, and more with a free Docker ID:\n https://hub.docker.com/\n\nFor more examples and ideas, visit:\n https://docs.docker.com/get-started/"
+}
+2021-08-06 12:52:18,827 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [clear for docker] ******************************************************************************************************************************************
+2021-08-06 12:52:19,163 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:19,163 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [clear for docker iamge] ************************************************************************************************************************************
+2021-08-06 12:52:19,520 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:19,521 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [Create a symbolic linc Compose] ****************************************************************************************************************************
+2021-08-06 12:52:19,843 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:19,844 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [test docker-compose] ***************************************************************************************************************************************
+2021-08-06 12:52:20,895 p=139716 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 12:52:20,895 p=139716 u=mdm_admin n=ansible | RUNNING HANDLER [verification test docker-compose] **************************************************************************************************************************
+2021-08-06 12:52:20,984 p=139716 u=mdm_admin n=ansible | ok: [localhost] => {
+    "msg": "Run docker docker-compose version 1.25.5, build 8a1c60f6"
+}
+2021-08-06 12:52:20,986 p=139716 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 12:52:20,986 p=139716 u=mdm_admin n=ansible | localhost                  : ok=19   changed=13   unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+2021-08-06 12:52:20,986 p=139716 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=10   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2021-08-06 12:52:20,987 p=139716 u=mdm_admin n=ansible | mdmdb01.elcom.loc          : ok=10   changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2021-08-06 13:41:18,520 p=148353 u=mdm_admin n=ansible | [DEPRECATION WARNING]: The TRANSFORM_INVALID_GROUP_CHARS settings is set to allow bad characters in group names by default, this will change, but still be user configurable
+ on deprecation. This feature will be removed in version 2.10. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 13:41:18,520 p=148353 u=mdm_admin n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2021-08-06 13:41:18,904 p=148353 u=mdm_admin n=ansible | PLAY [Load RKE kernel modules] **********************************************************************************************************************************************
+2021-08-06 13:41:18,923 p=148353 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 13:41:20,293 p=148353 u=mdm_admin n=ansible | ok: [localhost]
+2021-08-06 13:41:20,772 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 13:41:20,783 p=148353 u=mdm_admin n=ansible | TASK [Load kernel modules for RKE] ******************************************************************************************************************************************
+2021-08-06 13:41:21,182 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=br_netfilter)
+2021-08-06 13:41:21,247 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=br_netfilter)
+2021-08-06 13:41:21,406 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=ip6_udp_tunnel) => {"ansible_loop_var": "item", "changed": false, "item": "ip6_udp_tunnel", "msg": "modprobe: ERROR: could not insert 'ip6_udp_tunnel': Operation not permitted\n", "name": "ip6_udp_tunnel", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip6_udp_tunnel': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip6_udp_tunnel': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:21,554 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=ip6_udp_tunnel) => {"ansible_loop_var": "item", "changed": false, "item": "ip6_udp_tunnel", "msg": "modprobe: ERROR: could not insert 'ip6_udp_tunnel': Operation not permitted\n", "name": "ip6_udp_tunnel", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip6_udp_tunnel': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip6_udp_tunnel': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:21,634 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=ip_set) => {"ansible_loop_var": "item", "changed": false, "item": "ip_set", "msg": "modprobe: ERROR: could not insert 'ip_set': Operation not permitted\n", "name": "ip_set", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip_set': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip_set': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:21,862 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=ip_set) => {"ansible_loop_var": "item", "changed": false, "item": "ip_set", "msg": "modprobe: ERROR: could not insert 'ip_set': Operation not permitted\n", "name": "ip_set", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip_set': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip_set': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:21,869 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=ip_set_hash_ip) => {"ansible_loop_var": "item", "changed": false, "item": "ip_set_hash_ip", "msg": "modprobe: ERROR: could not insert 'ip_set_hash_ip': Operation not permitted\n", "name": "ip_set_hash_ip", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip_set_hash_ip': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip_set_hash_ip': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:22,099 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=ip_set_hash_net) => {"ansible_loop_var": "item", "changed": false, "item": "ip_set_hash_net", "msg": "modprobe: ERROR: could not insert 'ip_set_hash_net': Operation not permitted\n", "name": "ip_set_hash_net", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip_set_hash_net': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip_set_hash_net': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:22,180 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=ip_set_hash_ip) => {"ansible_loop_var": "item", "changed": false, "item": "ip_set_hash_ip", "msg": "modprobe: ERROR: could not insert 'ip_set_hash_ip': Operation not permitted\n", "name": "ip_set_hash_ip", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip_set_hash_ip': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip_set_hash_ip': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:22,318 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_filter)
+2021-08-06 13:41:22,497 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=ip_set_hash_net) => {"ansible_loop_var": "item", "changed": false, "item": "ip_set_hash_net", "msg": "modprobe: ERROR: could not insert 'ip_set_hash_net': Operation not permitted\n", "name": "ip_set_hash_net", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'ip_set_hash_net': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'ip_set_hash_net': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:22,575 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_nat)
+2021-08-06 13:41:22,795 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=iptable_filter)
+2021-08-06 13:41:22,799 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_mangle)
+2021-08-06 13:41:23,021 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_raw)
+2021-08-06 13:41:23,105 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=iptable_nat)
+2021-08-06 13:41:23,255 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_conntrack_netlink)
+2021-08-06 13:41:23,418 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=iptable_mangle) => {"ansible_loop_var": "item", "changed": false, "item": "iptable_mangle", "msg": "modprobe: ERROR: could not insert 'iptable_mangle': Operation not permitted\n", "name": "iptable_mangle", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'iptable_mangle': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'iptable_mangle': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:23,471 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_conntrack)
+2021-08-06 13:41:23,695 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=nf_conntrack_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_conntrack_ipv4", "msg": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_conntrack_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:23,721 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=iptable_raw) => {"ansible_loop_var": "item", "changed": false, "item": "iptable_raw", "msg": "modprobe: ERROR: could not insert 'iptable_raw': Operation not permitted\n", "name": "iptable_raw", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'iptable_raw': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'iptable_raw': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:23,937 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_defrag_ipv4)
+2021-08-06 13:41:24,022 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_conntrack_netlink)
+2021-08-06 13:41:24,174 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_nat)
+2021-08-06 13:41:24,324 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_conntrack)
+2021-08-06 13:41:24,414 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=nf_nat_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_ipv4", "msg": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:24,641 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=nf_conntrack_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_conntrack_ipv4", "msg": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_conntrack_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:24,643 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=nf_nat_masquerade_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_masquerade_ipv4", "msg": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_masquerade_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:24,907 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=nfnetlink)
+2021-08-06 13:41:24,951 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_defrag_ipv4)
+2021-08-06 13:41:25,136 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=udp_tunnel) => {"ansible_loop_var": "item", "changed": false, "item": "udp_tunnel", "msg": "modprobe: ERROR: could not insert 'udp_tunnel': Operation not permitted\n", "name": "udp_tunnel", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'udp_tunnel': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'udp_tunnel': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:25,249 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_nat)
+2021-08-06 13:41:25,350 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=veth)
+2021-08-06 13:41:25,556 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=nf_nat_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_ipv4", "msg": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:25,566 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=vxlan) => {"ansible_loop_var": "item", "changed": false, "item": "vxlan", "msg": "modprobe: ERROR: could not insert 'vxlan': Operation not permitted\n", "name": "vxlan", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'vxlan': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'vxlan': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:25,799 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=x_tables)
+2021-08-06 13:41:25,861 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=nf_nat_masquerade_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_masquerade_ipv4", "msg": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_masquerade_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:26,024 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=xt_addrtype)
+2021-08-06 13:41:26,161 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nfnetlink)
+2021-08-06 13:41:26,234 p=148353 u=mdm_admin n=ansible | ok: [localhost] => (item=xt_conntrack)
+2021-08-06 13:41:26,464 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=udp_tunnel) => {"ansible_loop_var": "item", "changed": false, "item": "udp_tunnel", "msg": "modprobe: ERROR: could not insert 'udp_tunnel': Operation not permitted\n", "name": "udp_tunnel", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'udp_tunnel': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'udp_tunnel': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:26,480 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_comment) => {"ansible_loop_var": "item", "changed": false, "item": "xt_comment", "msg": "modprobe: ERROR: could not insert 'xt_comment': Operation not permitted\n", "name": "xt_comment", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_comment': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_comment': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:26,716 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_mark) => {"ansible_loop_var": "item", "changed": false, "item": "xt_mark", "msg": "modprobe: ERROR: could not insert 'xt_mark': Operation not permitted\n", "name": "xt_mark", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_mark': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_mark': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:26,763 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=veth)
+2021-08-06 13:41:26,947 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_multiport) => {"ansible_loop_var": "item", "changed": false, "item": "xt_multiport", "msg": "modprobe: ERROR: could not insert 'xt_multiport': Operation not permitted\n", "name": "xt_multiport", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_multiport': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_multiport': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:27,068 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=vxlan) => {"ansible_loop_var": "item", "changed": false, "item": "vxlan", "msg": "modprobe: ERROR: could not insert 'vxlan': Operation not permitted\n", "name": "vxlan", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'vxlan': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'vxlan': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:27,199 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_nat) => {"ansible_loop_var": "item", "changed": false, "item": "xt_nat", "msg": "modprobe: ERROR: could not insert 'xt_nat': Operation not permitted\n", "name": "xt_nat", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_nat': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_nat': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:27,370 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=x_tables)
+2021-08-06 13:41:27,421 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_recent) => {"ansible_loop_var": "item", "changed": false, "item": "xt_recent", "msg": "modprobe: ERROR: could not insert 'xt_recent': Operation not permitted\n", "name": "xt_recent", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_recent': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_recent': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:27,657 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_set) => {"ansible_loop_var": "item", "changed": false, "item": "xt_set", "msg": "modprobe: ERROR: could not insert 'xt_set': Operation not permitted\n", "name": "xt_set", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_set': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_set': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:27,660 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=xt_addrtype)
+2021-08-06 13:41:27,914 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_statistic) => {"ansible_loop_var": "item", "changed": false, "item": "xt_statistic", "msg": "modprobe: ERROR: could not insert 'xt_statistic': Operation not permitted\n", "name": "xt_statistic", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_statistic': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_statistic': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:27,974 p=148353 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=xt_conntrack)
+2021-08-06 13:41:28,144 p=148353 u=mdm_admin n=ansible | failed: [localhost] (item=xt_tcpudp) => {"ansible_loop_var": "item", "changed": false, "item": "xt_tcpudp", "msg": "modprobe: ERROR: could not insert 'xt_tcpudp': Operation not permitted\n", "name": "xt_tcpudp", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_tcpudp': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_tcpudp': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:28,287 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_comment) => {"ansible_loop_var": "item", "changed": false, "item": "xt_comment", "msg": "modprobe: ERROR: could not insert 'xt_comment': Operation not permitted\n", "name": "xt_comment", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_comment': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_comment': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:28,600 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_mark) => {"ansible_loop_var": "item", "changed": false, "item": "xt_mark", "msg": "modprobe: ERROR: could not insert 'xt_mark': Operation not permitted\n", "name": "xt_mark", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_mark': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_mark': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:28,908 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_multiport) => {"ansible_loop_var": "item", "changed": false, "item": "xt_multiport", "msg": "modprobe: ERROR: could not insert 'xt_multiport': Operation not permitted\n", "name": "xt_multiport", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_multiport': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_multiport': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:29,213 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_nat) => {"ansible_loop_var": "item", "changed": false, "item": "xt_nat", "msg": "modprobe: ERROR: could not insert 'xt_nat': Operation not permitted\n", "name": "xt_nat", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_nat': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_nat': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:29,514 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_recent) => {"ansible_loop_var": "item", "changed": false, "item": "xt_recent", "msg": "modprobe: ERROR: could not insert 'xt_recent': Operation not permitted\n", "name": "xt_recent", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_recent': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_recent': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:29,818 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_set) => {"ansible_loop_var": "item", "changed": false, "item": "xt_set", "msg": "modprobe: ERROR: could not insert 'xt_set': Operation not permitted\n", "name": "xt_set", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_set': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_set': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:30,126 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_statistic) => {"ansible_loop_var": "item", "changed": false, "item": "xt_statistic", "msg": "modprobe: ERROR: could not insert 'xt_statistic': Operation not permitted\n", "name": "xt_statistic", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_statistic': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_statistic': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:30,442 p=148353 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=xt_tcpudp) => {"ansible_loop_var": "item", "changed": false, "item": "xt_tcpudp", "msg": "modprobe: ERROR: could not insert 'xt_tcpudp': Operation not permitted\n", "name": "xt_tcpudp", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: ERROR: could not insert 'xt_tcpudp': Operation not permitted\n", "stderr_lines": ["modprobe: ERROR: could not insert 'xt_tcpudp': Operation not permitted"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:41:30,445 p=148353 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 13:41:30,445 p=148353 u=mdm_admin n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-06 13:41:30,446 p=148353 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-06 13:42:31,416 p=149491 u=mdm_admin n=ansible | [DEPRECATION WARNING]: The TRANSFORM_INVALID_GROUP_CHARS settings is set to allow bad characters in group names by default, this will change, but still be user configurable
+ on deprecation. This feature will be removed in version 2.10. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 13:42:31,416 p=149491 u=mdm_admin n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2021-08-06 13:42:31,774 p=149491 u=mdm_admin n=ansible | PLAY [Load RKE kernel modules] **********************************************************************************************************************************************
+2021-08-06 13:42:31,792 p=149491 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 13:42:33,053 p=149491 u=mdm_admin n=ansible | ok: [localhost]
+2021-08-06 13:42:33,509 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 13:42:33,520 p=149491 u=mdm_admin n=ansible | TASK [Load kernel modules for RKE] ******************************************************************************************************************************************
+2021-08-06 13:42:33,943 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=br_netfilter)
+2021-08-06 13:42:34,005 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=br_netfilter)
+2021-08-06 13:42:34,188 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=ip6_udp_tunnel)
+2021-08-06 13:42:34,334 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=ip6_udp_tunnel)
+2021-08-06 13:42:34,435 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=ip_set)
+2021-08-06 13:42:34,662 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=ip_set)
+2021-08-06 13:42:34,675 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=ip_set_hash_ip)
+2021-08-06 13:42:34,933 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=ip_set_hash_net)
+2021-08-06 13:42:34,987 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=ip_set_hash_ip)
+2021-08-06 13:42:35,163 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_filter)
+2021-08-06 13:42:35,312 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=ip_set_hash_net)
+2021-08-06 13:42:35,402 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_nat)
+2021-08-06 13:42:35,614 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=iptable_filter)
+2021-08-06 13:42:35,646 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_mangle)
+2021-08-06 13:42:35,876 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=iptable_raw)
+2021-08-06 13:42:35,929 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=iptable_nat)
+2021-08-06 13:42:36,115 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_conntrack_netlink)
+2021-08-06 13:42:36,256 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=iptable_mangle)
+2021-08-06 13:42:36,360 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_conntrack)
+2021-08-06 13:42:36,571 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=iptable_raw)
+2021-08-06 13:42:36,606 p=149491 u=mdm_admin n=ansible | failed: [localhost] (item=nf_conntrack_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_conntrack_ipv4", "msg": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_conntrack_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:42:36,828 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_defrag_ipv4)
+2021-08-06 13:42:36,883 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_conntrack_netlink)
+2021-08-06 13:42:37,058 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=nf_nat)
+2021-08-06 13:42:37,185 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_conntrack)
+2021-08-06 13:42:37,304 p=149491 u=mdm_admin n=ansible | failed: [localhost] (item=nf_nat_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_ipv4", "msg": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:42:37,510 p=149491 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=nf_conntrack_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_conntrack_ipv4", "msg": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_conntrack_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_conntrack_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:42:37,541 p=149491 u=mdm_admin n=ansible | failed: [localhost] (item=nf_nat_masquerade_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_masquerade_ipv4", "msg": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_masquerade_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:42:37,784 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=nfnetlink)
+2021-08-06 13:42:37,821 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_defrag_ipv4)
+2021-08-06 13:42:38,050 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=udp_tunnel)
+2021-08-06 13:42:38,139 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nf_nat)
+2021-08-06 13:42:38,280 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=veth)
+2021-08-06 13:42:38,458 p=149491 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=nf_nat_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_ipv4", "msg": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:42:38,535 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=vxlan)
+2021-08-06 13:42:38,757 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=x_tables)
+2021-08-06 13:42:38,775 p=149491 u=mdm_admin n=ansible | failed: [mdm02.elcom.loc] (item=nf_nat_masquerade_ipv4) => {"ansible_loop_var": "item", "changed": false, "item": "nf_nat_masquerade_ipv4", "msg": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "name": "nf_nat_masquerade_ipv4", "params": "", "rc": 1, "state": "present", "stderr": "modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic\n", "stderr_lines": ["modprobe: FATAL: Module nf_nat_masquerade_ipv4 not found in directory /lib/modules/5.4.0-80-generic"], "stdout": "", "stdout_lines": []}
+2021-08-06 13:42:38,993 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=xt_addrtype)
+2021-08-06 13:42:39,080 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=nfnetlink)
+2021-08-06 13:42:39,235 p=149491 u=mdm_admin n=ansible | ok: [localhost] => (item=xt_conntrack)
+2021-08-06 13:42:39,413 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=udp_tunnel)
+2021-08-06 13:42:39,498 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_comment)
+2021-08-06 13:42:39,724 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=veth)
+2021-08-06 13:42:39,752 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_mark)
+2021-08-06 13:42:40,011 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_multiport)
+2021-08-06 13:42:40,067 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=vxlan)
+2021-08-06 13:42:40,257 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_nat)
+2021-08-06 13:42:40,382 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=x_tables)
+2021-08-06 13:42:40,515 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_recent)
+2021-08-06 13:42:40,696 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=xt_addrtype)
+2021-08-06 13:42:40,764 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_set)
+2021-08-06 13:42:41,011 p=149491 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc] => (item=xt_conntrack)
+2021-08-06 13:42:41,013 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_statistic)
+2021-08-06 13:42:41,254 p=149491 u=mdm_admin n=ansible | changed: [localhost] => (item=xt_tcpudp)
+2021-08-06 13:42:41,334 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_comment)
+2021-08-06 13:42:41,658 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_mark)
+2021-08-06 13:42:41,977 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_multiport)
+2021-08-06 13:42:42,306 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_nat)
+2021-08-06 13:42:42,637 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_recent)
+2021-08-06 13:42:42,971 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_set)
+2021-08-06 13:42:43,286 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_statistic)
+2021-08-06 13:42:43,614 p=149491 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item=xt_tcpudp)
+2021-08-06 13:42:43,620 p=149491 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 13:42:43,621 p=149491 u=mdm_admin n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-06 13:42:43,621 p=149491 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2021-08-06 13:44:55,924 p=150715 u=mdm_admin n=ansible | [DEPRECATION WARNING]: The TRANSFORM_INVALID_GROUP_CHARS settings is set to allow bad characters in group names by default, this will change, but still be user configurable
+ on deprecation. This feature will be removed in version 2.10. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-08-06 13:44:55,925 p=150715 u=mdm_admin n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2021-08-06 13:44:56,277 p=150715 u=mdm_admin n=ansible | PLAY [Disable swap and load kernel modules] *********************************************************************************************************************************
+2021-08-06 13:44:56,295 p=150715 u=mdm_admin n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************
+2021-08-06 13:44:57,624 p=150715 u=mdm_admin n=ansible | ok: [localhost]
+2021-08-06 13:44:58,049 p=150715 u=mdm_admin n=ansible | ok: [mdm02.elcom.loc]
+2021-08-06 13:44:58,060 p=150715 u=mdm_admin n=ansible | TASK [Disable SWAP since kubernetes can't work with swap enabled (1/2)] *****************************************************************************************************
+2021-08-06 13:44:58,488 p=150715 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 13:44:58,523 p=150715 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 13:44:58,534 p=150715 u=mdm_admin n=ansible | TASK [Disable SWAP in fstab since kubernetes can't work with swap enabled (2/2)] ********************************************************************************************
+2021-08-06 13:44:58,939 p=150715 u=mdm_admin n=ansible | changed: [localhost]
+2021-08-06 13:44:58,975 p=150715 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc]
+2021-08-06 13:44:58,986 p=150715 u=mdm_admin n=ansible | TASK [Modify sysctl entries] ************************************************************************************************************************************************
+2021-08-06 13:44:59,429 p=150715 u=mdm_admin n=ansible | changed: [localhost] => (item={'key': 'net.bridge.bridge-nf-call-ip6tables', 'value': 1})
+2021-08-06 13:44:59,496 p=150715 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item={'key': 'net.bridge.bridge-nf-call-ip6tables', 'value': 1})
+2021-08-06 13:44:59,677 p=150715 u=mdm_admin n=ansible | changed: [localhost] => (item={'key': 'net.bridge.bridge-nf-call-iptables', 'value': 1})
+2021-08-06 13:44:59,811 p=150715 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item={'key': 'net.bridge.bridge-nf-call-iptables', 'value': 1})
+2021-08-06 13:44:59,966 p=150715 u=mdm_admin n=ansible | changed: [localhost] => (item={'key': 'net.ipv4.ip_forward', 'value': 1})
+2021-08-06 13:45:01,165 p=150715 u=mdm_admin n=ansible | changed: [mdm02.elcom.loc] => (item={'key': 'net.ipv4.ip_forward', 'value': 1})
+2021-08-06 13:45:01,168 p=150715 u=mdm_admin n=ansible | PLAY RECAP ******************************************************************************************************************************************************************
+2021-08-06 13:45:01,168 p=150715 u=mdm_admin n=ansible | localhost                  : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-08-06 13:45:01,169 p=150715 u=mdm_admin n=ansible | mdm02.elcom.loc            : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

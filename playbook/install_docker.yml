@@ -1,7 +1,7 @@
-#- hosts: docker_hosts
-- name: "Ansible playbook example"
-  hosts: 127.0.0.1
-  connection: local
+- hosts: docker_hosts
+#- name: "Ansible playbook example"
+#  hosts: 127.0.0.1
+#  connection: local
   vars: 
     path_docker_compose: /usr/local/bin/docker-compose
     distr_release: Eoan
