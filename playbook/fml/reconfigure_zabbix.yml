@@ -1,0 +1,53 @@
+ - hosts:
+    - zabbix-monitoring
+#   vars_files:
+#      - vars.yml
+   tasks:
+    - name: Copy config sodoers
+      copy:
+        src: file/zabbix_du
+        dest:  /etc/sudoers.d/zabbix_du
+        group: root
+        owner: root
+        mode: 0440
+        validate: /usr/sbin/visudo -cf %s
+      become: true
+      tags: sodoer_config_zabbix
+
+    - name: test zabbix
+      command: su -s /bin/sh -c "sudo /usr/bin/du -Sh /var/log/ | sort -rh | head -10" zabbix
+      #      sudo -u zabbix /bin/bash -c "sudo /usr/bin/du -hs /var/log/"
+      become: true
+      register: result
+      tags: test_docker-compose
+ 
+    - name: verification test user zabbix run du
+      debug:
+        msg: Run {{ result.stdout }}
+      tags: test_docker-compose
+ 
+    - name: Copy config zabbix
+      copy:
+        src: file/userparameter_du.conf
+        dest:  /etc/zabbix/zabbix_agentd.d/userparameter_du.conf
+        group: root
+        owner: root
+        mode: 0644
+      tags: config_zabbix
+      notify:
+      - ZabbixRestart
+    - name: Install python
+      yum:
+        name:
+          - policycoreutils-python
+        state: present
+    - name: zabbix_agent_t
+      command: sudo setsebool -P zabbix_can_network=1 && sudo semanage permissive -a zabbix_agent_t
+      become: true
+
+   handlers:
+    - name: ZabbixRestart
+      systemd:
+        name: zabbix-agent
+        state: restarted
+        enabled: yes

@@ -1,0 +1,447 @@
+[brandpool]
+37.77.107.108
+[lantu]
+194.67.92.226
+[ad-master]
+217.73.62.221
+[ad-node14]
+172.31.0.57
+[ad-node15]
+172.31.0.43
+[ad-storage]
+172.31.0.45
+#[fm-gitlab-runner]
+#fm-gitlab-runner ansible_port=2124 ansible_host=127.0.0.1
+[gitlab-runner]
+78.47.201.136
+[ingka]
+185.157.124.67 ansible_port=2222 ansible_host=185.157.124.67
+[norauto]
+89.108.65.188
+[filab]
+176.99.12.80
+[digitalocean]
+localhost ansible_connection=local
+[mtm]
+62.210.106.181
+[docker-master]
+176.9.76.146
+#master
+#138.201.88.4
+[zabbix]
+49.12.8.208
+[server-fvs25]
+148.251.232.171 ansible_ssh_host=148.251.232.171 my_host_alias=server-fvs25 glusterip=148.251.232.171
+[server-fvs26]
+144.76.99.158 ansible_ssh_host=144.76.99.158 my_host_alias=server-fvs26 glusterip=144.76.99.158
+[server-fvs26new]
+144.76.99.158
+[server-fvs101]
+46.101.200.159 ansible_ssh_host=46.101.200.159 my_host_alias=server-fvs101
+[server-fvs21]
+148.251.190.69 ansible_ssh_host=148.251.190.69 my_host_alias=server-fvs21
+[server-fvs22]
+78.46.141.152 ansible_ssh_host=78.46.141.152 my_host_alias=server-fvs22
+[server-fvs23]
+5.9.140.230 ansible_ssh_host=5.9.140.230 my_host_alias=server-fvs23
+[server-fvs28]
+136.243.58.9 ansible_ssh_host=136.243.58.9 my_host_alias=server-fvs28
+[server-fvs30]
+5.9.32.131 ansible_ssh_host=5.9.32.131 my_host_alias=server-fvs30
+[server-fvs35]
+148.251.190.146 ansible_ssh_host=148.251.190.146 my_host_alias=server-fvs35
+[server-fvs36]
+148.251.46.121 ansible_ssh_host=148.251.46.121 my_host_alias=server-fvs36
+[server-fvs37]
+148.251.79.143 ansible_ssh_host=148.251.79.143 my_host_alias=server-fvs37
+[server-fvs38]
+95.216.19.54 ansible_ssh_host=95.216.19.54 my_host_alias=server-fvs38
+[server-fvs39]
+148.251.52.211 ansible_ssh_host=148.251.52.211 my_host_alias=server-fvs39
+[server-fvs40]
+144.76.165.67 ansible_ssh_host=144.76.165.67 my_host_alias=server-fvs40
+[server-fvs41]
+195.201.189.18 ansible_ssh_host=195.201.189.18 my_host_alias=server-fvs41
+[server-fvs42]
+188.40.122.111 ansible_ssh_host=188.40.122.111 my_host_alias=server-fvs42
+[server-fvs43]
+188.34.167.162
+[server-fvs45]
+144.76.104.146 ansible_ssh_host=144.76.104.146 my_host_alias=server-fvs45
+[server-fvs46]
+148.251.52.207 ansible_ssh_host=148.251.52.207 my_host_alias=server-fvs46
+[server-fvs49]
+148.251.20.117 ansible_ssh_host=148.251.20.117 my_host_alias=server-fvs49
+[server-fvs50]
+144.76.82.61 ansible_ssh_host=144.76.82.61 my_host_alias=server-fvs50
+[server-fvs51]
+5.9.22.227 ansible_ssh_host=5.9.22.227 my_host_alias=server-fvs51
+[server-fvs52]
+144.76.225.198 ansible_ssh_host=144.76.225.198 my_host_alias=server-fvs52
+[server-fvs53]
+server-fvs53.kt-team.de ansible_ssh_host=server-fvs53.kt-team.de my_host_alias=server-fvs53
+[server-fvs54]
+136.243.69.85 ansible_ssh_host=136.243.69.85 my_host_alias=server-fvs54
+[server-fvs55]
+5.9.72.41 ansible_ssh_host=5.9.72.41 my_host_alias=server-fvs55
+[server-fvs56]
+78.47.37.208 ansible_ssh_host=78.47.37.208
+[server-fvs57]
+5.9.152.233 ansible_ssh_host=5.9.152.233 my_host_alias=server-fvs57
+[server-fvs59]
+176.9.74.14 ansible_ssh_host=176.9.74.14 my_host_alias=server-fvs59  ansible_python_interpreter=/usr/bin/python3
+[server-fvs60]
+65.108.142.175 ansible_ssh_host=65.108.142.175 my_host_alias=server-fvs60  ansible_python_interpreter=/usr/bin/python3
+
+[server-fvs32]
+94.130.27.218 ansible_ssh_host=94.130.27.218 my_host_alias=server-fvs32
+[server-fvs34]
+148.251.138.207 ansible_ssh_host=148.251.138.207 my_host_alias=server-fvs34
+[server-dl1]
+92.242.45.99 ansible_ssh_host=92.242.45.99 my_host_alias=server-dl1
+[server-dl2]
+192.168.100.100 ansible_ssh_host=192.168.100.100 my_host_alias=server-dl2
+[server-dl3]
+192.168.100.102 ansible_ssh_host=192.168.100.102 my_host_alias=server-dl3
+[server-dl4]
+192.168.100.101 ansible_ssh_host=192.168.100.101 my_host_alias=server-dl4
+[server-dl5]
+176.9.73.213 ansible_ssh_host=176.9.73.213 my_host_alias=server-dl5
+[server-dl6]
+192.168.100.104 ansible_ssh_host=192.168.100.104 my_host_alias=server-dl6
+[chat]
+#139.59.133.163 ansible_ssh_host=139.59.133.163 my_host_alias=chat
+49.12.3.43
+[server-fvs27]
+5.9.89.66 ansible_ssh_host=5.9.89.66 my_host_alias=server-fvs27
+[rancher]
+162.55.167.204 ansible_ssh_host=162.55.167.204 my_host_alias=rancher
+
+#[balancer]
+#5.200.35.199 ansible_ssh_host=5.200.35.199 my_host_alias=balancer
+[balancer2]
+5.200.35.224 ansible_ssh_host=5.200.35.224 my_host_alias=balancer
+[balancer3]
+78.47.94.95 ansible_ssh_host=78.47.94.95 my_host_alias=balancer
+[balancer6]
+78.46.199.190 ansible_ssh_host=78.46.199.190 my_host_alias=balancer  hostname=balancer6
+[balancer7]
+88.99.82.65 ansible_ssh_host=88.99.82.65 my_host_alias=balancer  hostname=balancer7
+[balancer8]
+94.130.56.213 ansible_ssh_host=94.130.56.213 my_host_alias=balancer  hostname=balancer8
+[balancer9]
+94.130.224.216 ansible_ssh_host=94.130.224.216 my_host_alias=balancer  hostname=balancer9
+[balancer10]
+159.69.185.119 ansible_ssh_host=159.69.185.119 my_host_alias=balancer  hostname=balancer10
+[balancer11]
+138.201.189.148 ansible_ssh_host=138.201.189.148 my_host_alias=balancer  hostname=balancer11
+
+[ping]
+139.59.133.163
+139.59.152.209
+[Cantorfan-node]
+101.201.72.90
+[Cantorfan-mongodb]
+101.201.74.45
+[Roman-node]
+193.46.2.44
+[Roman-mongodb]
+193.46.2.44
+[lb.corp.snowqueen.ru]
+10.12.248.2
+[db.corp.snowqueen.ru]
+10.12.248.4
+[storage.corp.snowqueen.ru]
+10.12.248.3
+[sq-pim]
+10.12.248.12
+[sq-es1]
+10.12.248.18
+[sq-openshift]
+#sq-master
+#sq-node9
+#sq-node10
+sq-node11
+sq-node12
+sq-node13
+sq-node14
+sq-node15
+sq-node16
+sq-node17
+sq-node18
+#sq-app6
+#sq-app7
+#sq-app3
+#sq-app4
+#sq-app5
+#sq-app1
+#sq-app2
+
+
+[isolated-vpn]
+104.196.191.43
+#178.62.38.190
+[balancer5]	
+188.227.17.220 ansible_ssh_host=188.227.17.220 my_host_alias=balancer hostname=balancer5
+[temp]
+#104.196.48.200
+[sg-test]
+213.189.208.244
+
+[rrftp]
+104.196.22.143 ansible_ssh_host=104.196.22.143 my_host_alias=rrftp hostname=rrftp
+[algol]
+148.251.12.52 my_host_alias=algol
+[storage2.corp.snowqueen.ru]
+10.12.248.9 hostname=storage2.corp.snowqueen.ru
+[tlt-office]
+10.81.0.155
+[current]
+134.0.119.9
+[ullg]
+142.93.176.71
+[zabbix-proxy]
+5.200.53.183
+[kuber-master]
+159.89.105.19
+[kub-nodes]
+server-fvs39.kt-team.de
+
+[kuber-test]
+192.168.122.19
+
+
+[lanit]
+#192.168.168.5
+192.168.168.6
+192.168.168.7
+[lapp-openshift]
+10.70.240.5
+10.70.240.6
+
+[lapp]
+10.70.240.2
+10.70.240.3
+#10.70.240.4
+
+[vm]
+192.168.20.249
+192.168.20.250
+
+[fml-openshift]
+217.73.63.141
+217.73.63.142
+217.73.63.146
+
+[fml-lb]
+217.73.63.146
+
+[fml-base]
+217.73.63.144
+217.73.63.145
+
+[nike]
+10.11.12.2
+10.11.12.5
+
+[sg-db]
+213.189.209.11
+
+[sg]
+213.189.208.157
+213.189.208.167
+[sg-new2]
+213.189.208.157
+
+[ngkplus]
+193.124.206.244
+
+[artstyle]
+31.41.155.234
+
+[dandir]
+213.152.135.196
+
+[doctor]
+31.172.134.42
+
+[elkor-lb]
+49.12.2.161
+
+[elkor-zabbix]
+49.12.3.192
+
+[elkor-db-dev]
+78.47.22.183
+
+[elkor-db-prod]
+49.12.3.71
+
+[elkor-nfs]
+#46.4.74.116
+49.12.13.239
+[elkor-backup]
+178.63.68.103
+
+[elkor-elk]
+49.12.14.206
+
+[elkor-os]
+192.168.194.5
+192.168.194.6
+192.168.194.9
+192.168.194.10
+192.168.194.8
+192.168.194.7
+
+[mamont]
+78.46.98.108
+
+#[mareven-app]
+#mareven-app
+#[mareven-db]
+#mareven-db
+
+[fml-slave]
+192.168.20.200
+
+[sgsmactest]
+213.189.208.15
+[maxxium]
+195.24.65.164
+
+[maxxium-node]
+89.111.133.180
+
+[fmlf]
+fmlf-db
+fmlf-storage
+[fmlf-node4]
+217.73.63.90
+
+[pc008]
+192.168.20.254
+
+[pc020]
+192.168.21.4
+
+[sq-dbslave]
+10.12.248.15
+
+[rshb]
+192.168.111.2
+192.168.110.3
+192.168.110.4
+192.168.110.5
+192.168.110.6
+192.168.110.7
+192.168.110.8
+192.168.110.9
+192.168.110.10
+192.168.110.100
+192.168.110.101
+192.168.110.102
+192.168.110.103
+192.168.110.104
+192.168.110.105
+192.168.109.3
+192.168.109.100
+192.168.109.101
+192.168.109.102
+
+[mccinsey]
+45.90.34.131
+5.181.108.107
+
+[artlife]
+194.67.109.177
+
+[s3-autoeuro]
+185.193.139.147
+
+[btrfs]
+49.12.104.56
+
+[test]
+192.168.21.219
+
+[puls-openshift]
+10.1.12.29
+10.1.1.228
+10.1.12.50
+
+[puls-db]
+10.1.12.49
+
+[petrovich-openshift]
+10.127.31.5
+10.127.31.7
+
+[petrovich-db]
+10.127.31.6
+
+[askona]
+askona-master
+askona-node1
+askona-node2
+askona-db
+askona-storage
+
+[askona-db-demo]
+askona-db-dam
+
+[tt-openshift]
+172.31.0.46
+172.31.0.47
+
+[tt-db]
+172.31.0.51
+
+[tt-rabbitmq-prod]
+172.31.0.60
+
+[ad-prometheus]
+172.31.0.59
+
+[online24]
+151.248.116.119
+
+[diving]
+194.58.107.149
+[rlltn]
+89.111.181.29
+
+[polaris]
+#polaris-db
+#polaris-storage
+#polaris-lb
+#polaris-elk
+#polaris-prom
+polaris-master
+polaris-node1
+polaris-node2
+
+[of]
+192.168.20.108
+
+[fml-rabbit]
+fml-rabbit
+[gitlab]
+162.55.167.204
+
+[rancher]
+78.47.219.124
+
+[fmlf-slavenode2]
+fmlf-node2
+
+[fmlru-app]
+172.31.0.105
+
+[fmlru-db]
+172.31.0.10
+
+#[fml-invent-prod]
+#fml-invent-db-prod
+#fml-invent-elk
+#fml-invent-broker-prod

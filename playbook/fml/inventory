@@ -1,0 +1,20 @@
+[all:vars]
+ansible_user=root
+
+[zabbix-monitoring]
+App3 ansible_host=172.31.0.105
+172.31.0.88 ansible_user=ec2-user
+# у меня нет доступа к 172.31.0.10
+fmlru ansible_host=172.31.0.8
+Magento_Storage ansible_host=172.31.0.70
+App2 ansible_host=172.31.0.5
+App1 ansible_host=172.31.0.69
+tt-db-test ansible_host=172.31.0.55
+tt-db ansible_host=172.31.0.51
+node5.admin.docs ansible_host=172.31.0.47
+node9.admin.docs ansible_host=172.31.0.46
+HR_PimCoreStorage ansible_host=172.31.0.45
+HR_PimCoreDBAppDB ansible_host=172.31.0.44
+node15.admin.docs ansible_host=172.31.0.43
+node4.admin.docs ansible_host=172.31.0.36
+Node6_RabbitMQ ansible_host=172.31.0.60
